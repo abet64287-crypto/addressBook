@@ -1,50 +1,36 @@
-# 演示视频脚本与截图清单
+# Complete demo and screenshot checklist
 
-目标：用一段可观看的完整视频说明程序可以运行，并覆盖全部必做功能。**原帖要求完整演示视频，没有规定视频时长。** 以下顺序和约 4–6 分钟的时长仅为建议。
+The assignment requires a complete video, with no prescribed length. A 4-6 minute recording is a suggestion, not a course rule.
 
-## 录制前
+## Preparation
 
-- 按最终 README 启动发布版本，记录版本号。
-- 使用虚构联系人，避免在视频或导出文件中展示真实通讯录。
-- 准备至少两位演示联系人，其中一位有两个电话、两个邮箱、社交账号和地址。
-- 准备隔离的空白测试数据环境，用于验证导出后重新导入；不要清空真实数据。
-- 准备一个符合格式的 Excel 示例和一个无效示例。
-- 检查文字清晰、鼠标动作可辨认、录制窗口不遮挡提示。
+Use the final version and README; show its version identifier. Prepare fictional contacts, a compatible XLSX, an invalid example, and isolated empty test data for round trips. Do not clear real data. Check legibility and recording quality.
 
-## 建议演示顺序
-
-| 顺序 | 操作 | 应看见的证据 |
+| Step | Action | Evidence |
 | --- | --- | --- |
-| 1 | 展示项目名称、版本、首页及运行方式 | 程序实际运行，能进入主要界面 |
-| 2 | 新建或编辑联系人，增加多个电话、邮箱、社交账号和地址 | 同一联系人保存多条、多种信息 |
-| 3 | 保存并打开详情，修改其中一项 | 数据正确显示并能编辑 |
-| 4 | 收藏联系人，打开收藏入口 | 收藏状态清楚，能快速访问 |
-| 5 | 刷新或重启，再取消收藏 | 数据和状态持久化，取消操作生效 |
-| 6 | 导出 Excel 并打开文件 | 一位联系人一行，表头合适，多个联系方式保留 |
-| 7 | 在隔离的空白测试数据环境导入刚导出的文件 | 出现成功反馈；导入联系人和联系方式正确 |
-| 8 | 演示无效文件或缺字段文件 | 清楚的失败提示及符合约定的数据保存行为 |
-| 9 | 简要展示 README、团队提交历史、Release、PR | 可复现说明及协作交付物可核验 |
-| 10 | 如有云部署，展示公开访问 | 公网地址能实际使用 |
+| 1 | Show application/version and startup | Actual running program |
+| 2 | Add/edit two phones, two emails, social account and address | Multiple labeled methods |
+| 3 | Save, view details and edit one method | Correct editable data |
+| 4 | Favorite and open Favorites | Quick access and visible state |
+| 5 | Refresh/restart and unfavorite | Persistence and removal |
+| 6 | Export and open XLSX | Labeled columns, one row per contact |
+| 7 | Import into isolated empty test data | Matching records and success feedback |
+| 8 | Import invalid file | Specific error and atomic rejection |
+| 9 | Show README, real history, Release and PR | Reproducibility and collaboration |
+| 10 | Show optional public deployment | Working URL outside localhost |
 
-录制后完整播放检查；确认导出文件能打开、视频链接可观看、未遗漏核心功能。未部署时跳过最后一步，不宣称获得云部署加分。
+Play the full recording afterward. Confirm the workbook opens and the video link is accessible. Skip the deployment step if not completed.
 
-## 建议保留的截图
+## Screenshots to retain
 
-- [ ] 程序主页与整体界面。
-- [ ] 收藏状态及收藏视图。
-- [ ] 同一联系人的多条联系方式编辑或详情。
-- [ ] Excel 导出文件内容，能看到表头和联系人行。
-- [ ] Excel 导入结果及必要的错误反馈。
-- [ ] GitHub 提交历史，两位成员作者信息可辨认。
-- [ ] 发布版本和 PR 页面。
-- [ ] 如有云部署：浏览器中可工作的公网页面。
-- [ ] 两人各自的博客发布结果和作业提交回执。
+- [ ] Main interface
+- [ ] Favorites and favorite state
+- [ ] Multiple methods and editor
+- [ ] Exported workbook headers/rows
+- [ ] Import success and invalid-file feedback
+- [ ] Commit history showing both members
+- [ ] Release and PR
+- [ ] Optional public application
+- [ ] Each blog and final submission receipt
 
-## 视频与图片链接记录
-
-| 材料 | 实际文件或发布链接 |
-| --- | --- |
-| 完整视频 | 【录制后填写】 |
-| 程序截图 | 【截图后填写】 |
-| GitHub 提交记录截图 | 【截图后填写】 |
-| 博客与提交回执 | 【完成后填写】 |
+Main/Favorites/editor images exist under evidence/. The initial four-commit image is saved locally in team-handoff. Workbook/import images, complete recording, final history and submission receipts remain to be completed.

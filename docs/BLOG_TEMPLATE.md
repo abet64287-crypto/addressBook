@@ -1,150 +1,124 @@
-<!-- 两人可共享本模板，但每位成员都要各自发布个人博客。 -->
-<!-- 所有【占位内容】及未执行事项必须在发布前处理；不要把计划写成已完成。 -->
+# Extreme Programming: Address Book
 
-# Extreme Programming：通讯录应用与双人协作实践
+> Draft only. Replace placeholders with actual evidence before publishing. Each member publishes an individual personal blog.
 
 | Item | Content |
 | --- | --- |
 | Course for This Assignment | [2601_FZU-MU_SE](https://bbs.csdn.net/forums/2601_MU_SE_FZU) |
-| Team Name | 【团队名；本篇作者姓名 / 学号按课程要求填写】 |
-| Assignment Requirements | [Extreme Programming 作业要求](https://bbs.csdn.net/topics/620593436) |
-| Objectives of This Assignment | 实现通讯录的收藏、多种联系方式和 Excel 导入导出，实践双人协作、Git 与软件工程方法 |
-| Other References | 【实际使用的项目文档、Excel 库官方文档等；未使用的不填写】 |
+| Team Name | [Team name and this blog's author] |
+| Assignment Requirements | [Extreme Programming](https://bbs.csdn.net/topics/620593436) |
+| Objectives of This Assignment | Implement address book features and practice pair collaboration, Git and software engineering |
+| Other References | [Sources actually used] |
 
-## 目录
+## Contents
 
-- [项目与交付链接](#项目与交付链接)
-- [需求与实现思路](#需求与实现思路)
-- [程序运行证据](#程序运行证据)
-- [Git 协作与贡献记录](#git-协作与贡献记录)
-- [成员分工与贡献比例](#成员分工与贡献比例)
-- [协作问题与解决办法](#协作问题与解决办法)
-- [PSP 时间记录](#psp-时间记录)
-- [验收结果](#验收结果)
-- [个人总结](#个人总结)
+- [Project links](#project-links)
+- [Implementation](#implementation)
+- [Running evidence](#running-evidence)
+- [Git contributions](#git-contributions)
+- [Responsibilities and contribution ratios](#responsibilities-and-contribution-ratios)
+- [Problems and solutions](#problems-and-solutions)
+- [PSP records](#psp-records)
+- [Acceptance and reflection](#acceptance-and-reflection)
 
-## 项目与交付链接
+## Project links
 
-| 材料 | 链接 |
+| Material | Link |
 | --- | --- |
-| 老师指定的源仓库 | 【链接】 |
-| GitHub 团队 Fork 仓库 | 【链接】 |
-| 代码规范文档 | 【仓库内实际文档链接】 |
-| 运行说明 | 【README 链接】 |
-| 发布版本 | 【Release 链接，注明对应版本】 |
-| Pull Request | 【实际 PR 链接】 |
-| 完整演示视频 | 【上传后填写可观看链接】 |
-| 公开应用地址（可选） | 【部署后填写；未部署写未部署】 |
+| Team repository | https://github.com/abet64287-crypto/addressBook |
+| Specified source repository | [Confirm the course's fork requirement] |
+| Standards | https://github.com/abet64287-crypto/addressBook/blob/main/docs/CODING_STANDARDS.md |
+| Run instructions | https://github.com/abet64287-crypto/addressBook/blob/main/README.md |
+| Release | [Actual version link] |
+| PR | [Actual PR link] |
+| Complete video | [Accessible recording; not yet recorded] |
+| Public application, optional | [Working URL after deployment, or state not deployed] |
 
-## 需求与实现思路
+## Implementation
 
-### 项目基础与架构
+[Describe the actual architecture, persistence, favorites, multiple methods, Excel format, validation and interface, with code links.]
 
-【说明原项目技术栈、已有功能、此次新增功能、主要模块和数据保存方式。仅描述最终实际实现。】
+## Running evidence
 
-### 联系人收藏
+[Insert actual screenshots. Upload local images to CSDN and replace local paths before publication. Include workbook/import evidence.]
 
-【说明收藏状态如何保存、如何收藏和取消、如何快速访问，以及刷新或重启后的行为。】
+Complete demonstration video: [Link or embed]. Screenshots do not replace the required full recording.
 
-### 多种联系方式
+## Git contributions
 
-【说明一位联系人如何保存多个电话、邮箱、社交账号、地址，界面如何增删编辑这些信息。附真实数据结构或关键代码链接。】
+[Insert actual history screenshots with author identities. State the baseline-to-release scope, treatment of merges and any inherited history excluded.]
 
-### Excel 导入导出
-
-【说明 Excel 库、实际表头、一人一行、多条信息的表示、导入校验、重复处理、错误反馈。给出导出后重新导入的验证结果。】
-
-### 页面设计
-
-【说明布局、收藏入口、详情与编辑、导入导出反馈等设计。】
-
-## 程序运行证据
-
-【插入真实运行截图：主页、收藏、多条联系方式编辑、导入结果、导出表格。图片上传 CSDN 后检查可访问性，不能直接使用本地路径作为网络博客图片。】
-
-完整演示视频：【填写链接或嵌入可观看视频；需要覆盖完整流程，不能只用截图代替。】
-
-## Git 协作与贡献记录
-
-【插入 GitHub 提交历史截图，能看清作者和提交；说明团队分支流程及 PR。】
-
-统计范围：【本次作业的真实开发基线 → 发布版本；排除 Fork 继承历史，说明是否包含合并提交。】
-
-| 成员 | GitHub 用户名 | 本次作业提交次数 | 代表性提交 |
+| Member | GitHub username | Actual assignment commits | Representative commits |
 | --- | --- | ---: | --- |
-| 【A】 | 【账号】 | 【实测次数】 | 【链接】 |
-| 【B】 | 【账号】 | 【实测次数】 | 【链接】 |
+| A | abet64287-crypto [confirm] | [Final count] | [Links] |
+| B | [Username] | [Actual count] | [Links] |
 
-## 成员分工与贡献比例
+## Responsibilities and contribution ratios
 
-| 成员 | 实际代码与协作工作 | 贡献比例 |
+| Member | Actual work and evidence | Contribution |
 | --- | --- | ---: |
-| 【A】 | 【实际完成内容】 | 【填写】% |
-| 【B】 | 【实际完成内容】 | 【填写】% |
-| 合计 | | 100% |
+| A | [Complete] | [Value]% |
+| B | [Complete] | [Value]% |
+| Total | | 100% |
 
-【贡献比例的依据：结合实际代码、联调、验收和文档工作；提交次数不直接等于贡献比例。】
+Explain percentages using actual implementation, integration, review, verification and documentation. Commit count alone is not a percentage.
 
-## 协作问题与解决办法
+## Problems and solutions
 
-### 成员 A
+### Member A
 
-【本人实际遇到的问题 → 原因 → 处理办法 → 验证结果 → 对应证据。】
+[Actual problem, cause, solution, verification and evidence.]
 
-### 成员 B
+### Member B
 
-【本人实际遇到的问题 → 原因 → 处理办法 → 验证结果 → 对应证据。】
+[Actual problem, cause, solution, verification and evidence.]
 
-## PSP 时间记录
+## PSP records
 
-单位：分钟。**开发前填写预估；实际发生后填写实际耗时。不要事后把两列都编成预估值。** 若课程另有指定 PSP 表，使用课程表头替换。下表按常见 PSP 2.1 阶段列出，两位成员分别记录；父阶段为子项小计，总计不重复累计父阶段。
+Use minutes. Estimate before work and record actual time afterward; do not reconstruct estimates as if recorded earlier. Use a course-supplied table if required. Subtotals sum child rows; the grand total must not double-count subtotals.
 
-### 成员 A：【姓名】
+### Member A: [Name]
 
-| PSP 2.1 | 阶段 | 预估耗时（分钟） | 实际耗时（分钟） |
+| PSP 2.1 | Activity | Estimated minutes | Actual minutes |
 | --- | --- | ---: | ---: |
-| Planning | 计划小计 | 【子项和】 | 【子项和】 |
-| Estimate | 估计任务时间并规划步骤 | 【开发前填写】 | 【实际记录】 |
-| Development | 开发小计 | 【子项和】 | 【子项和】 |
-| Analysis | 需求分析 | 【填写】 | 【填写】 |
-| Design Spec | 生成设计文档 | 【填写】 | 【填写】 |
-| Design Review | 设计复审 | 【填写】 | 【填写】 |
-| Coding Standard | 制定或学习代码规范 | 【填写】 | 【填写】 |
-| Design | 具体设计 | 【填写】 | 【填写】 |
-| Coding | 编码 | 【填写】 | 【填写】 |
-| Code Review | 代码复审 | 【填写】 | 【填写】 |
-| Test | 测试与修复 | 【填写】 | 【填写】 |
-| Reporting | 报告小计 | 【子项和】 | 【子项和】 |
-| Test Report | 测试报告 | 【填写】 | 【填写】 |
-| Size Measurement | 计算工作量 | 【填写】 | 【填写】 |
-| Postmortem & Process Improvement Plan | 事后总结与改进计划 | 【填写】 | 【填写】 |
-| Total | 总计（计划 + 开发 + 报告） | 【求和】 | 【求和】 |
+| Planning | Planning subtotal | [Complete] | [Complete] |
+| Estimate | Effort estimate and plan | [Complete] | [Complete] |
+| Development | Development subtotal | [Complete] | [Complete] |
+| Analysis | Requirements analysis | [Complete] | [Complete] |
+| Design Spec | Design document | [Complete] | [Complete] |
+| Design Review | Design review | [Complete] | [Complete] |
+| Coding Standard | Coding standards | [Complete] | [Complete] |
+| Design | Detailed design | [Complete] | [Complete] |
+| Coding | Implementation | [Complete] | [Complete] |
+| Code Review | Code review | [Complete] | [Complete] |
+| Test | Testing and fixes | [Complete] | [Complete] |
+| Reporting | Reporting subtotal | [Complete] | [Complete] |
+| Test Report | Test report | [Complete] | [Complete] |
+| Size Measurement | Work measurement | [Complete] | [Complete] |
+| Postmortem & Process Improvement Plan | Retrospective and improvements | [Complete] | [Complete] |
+| Total | Planning + Development + Reporting | [Complete] | [Complete] |
 
-### 成员 B：【姓名】
+### Member B: [Name]
 
-| PSP 2.1 | 阶段 | 预估耗时（分钟） | 实际耗时（分钟） |
+| PSP 2.1 | Activity | Estimated minutes | Actual minutes |
 | --- | --- | ---: | ---: |
-| Planning | 计划小计 | 【子项和】 | 【子项和】 |
-| Estimate | 估计任务时间并规划步骤 | 【开发前填写】 | 【实际记录】 |
-| Development | 开发小计 | 【子项和】 | 【子项和】 |
-| Analysis | 需求分析 | 【填写】 | 【填写】 |
-| Design Spec | 生成设计文档 | 【填写】 | 【填写】 |
-| Design Review | 设计复审 | 【填写】 | 【填写】 |
-| Coding Standard | 制定或学习代码规范 | 【填写】 | 【填写】 |
-| Design | 具体设计 | 【填写】 | 【填写】 |
-| Coding | 编码 | 【填写】 | 【填写】 |
-| Code Review | 代码复审 | 【填写】 | 【填写】 |
-| Test | 测试与修复 | 【填写】 | 【填写】 |
-| Reporting | 报告小计 | 【子项和】 | 【子项和】 |
-| Test Report | 测试报告 | 【填写】 | 【填写】 |
-| Size Measurement | 计算工作量 | 【填写】 | 【填写】 |
-| Postmortem & Process Improvement Plan | 事后总结与改进计划 | 【填写】 | 【填写】 |
-| Total | 总计（计划 + 开发 + 报告） | 【求和】 | 【求和】 |
+| Planning | Planning subtotal | [Complete] | [Complete] |
+| Estimate | Effort estimate and plan | [Complete] | [Complete] |
+| Development | Development subtotal | [Complete] | [Complete] |
+| Analysis | Requirements analysis | [Complete] | [Complete] |
+| Design Spec | Design document | [Complete] | [Complete] |
+| Design Review | Design review | [Complete] | [Complete] |
+| Coding Standard | Coding standards | [Complete] | [Complete] |
+| Design | Detailed design | [Complete] | [Complete] |
+| Coding | Implementation | [Complete] | [Complete] |
+| Code Review | Code review | [Complete] | [Complete] |
+| Test | Testing and fixes | [Complete] | [Complete] |
+| Reporting | Reporting subtotal | [Complete] | [Complete] |
+| Test Report | Test report | [Complete] | [Complete] |
+| Size Measurement | Work measurement | [Complete] | [Complete] |
+| Postmortem & Process Improvement Plan | Retrospective and improvements | [Complete] | [Complete] |
+| Total | Planning + Development + Reporting | [Complete] | [Complete] |
 
-## 验收结果
+## Acceptance and reflection
 
-【填写实际环境、验证日期、通过与未通过项、Excel 往返结果，以及仍存在的限制。不要把待测试写成已通过。】
-
-## 个人总结
-
-【本篇作者分别写自己承担的代码、学到的协作方法、仍需改进的地方；保持真实。】
+[Actual date, environment, results, limitations and this author's responsibilities and lessons. Do not claim pending work is complete.]

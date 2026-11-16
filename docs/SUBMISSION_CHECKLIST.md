@@ -1,68 +1,55 @@
-# 提交与验收清单
+# Submission and acceptance checklist
 
-依据：<https://bbs.csdn.net/topics/620593436>  
-截止：2026-11-17 23:59，北京时间。
+Source: [assignment](https://bbs.csdn.net/topics/620593436). Deadline: November 17, 2026, 23:59 UTC+8. Mark items only when actual evidence exists.
 
-所有方框初始为空。只能在实际完成并有可核验证据后勾选；下面的建议测试不等于老师新增的评分要求。
+## Project and collaboration
 
-## A. 原帖要求
+- [ ] Confirm the specified-fork requirement for the selected newly created repository.
+- [ ] Agree on boundaries, responsibilities, standards and Git workflow.
+- [ ] Both members make meaningful code contributions using their own accounts.
+- [x] At least three repository commits: four initial A commits are recorded, followed by documentation updates.
+- [ ] Merge B and verify favorites, multiple methods, Excel and interface in the team repository.
+- [ ] Provide reproducible source, installation and operation instructions.
+- [ ] Publish a Release and retain its source SHA/link.
+- [ ] Create a PR and retain its link; confirm any instructor-specific target.
+- [ ] If claiming the bonus, provide a working public cloud URL.
 
-### 项目与协作
+## Each member's blog
 
-- [ ] Fork 老师指定的仓库，建立 GitHub 团队仓库。
-- [ ] 编码前讨论模块边界、两人职责、代码规范和 Git 协作流程。
-- [ ] 两位同学都有实际且有意义的代码贡献。
-- [ ] 团队仓库至少有 3 次提交，并能统计两人各自的提交次数。
-- [ ] 程序具有联系人收藏和快速访问收藏联系人的功能。
-- [ ] 同一联系人支持多种、多条联系方式。
-- [ ] 支持 Excel 导入与导出；导出一位联系人一行，列名合适。
-- [ ] 有可用界面，应用可正常运行。
-- [ ] 源码、运行说明及相关文档已上传，助教可复现构建和启动。
-- [ ] 发布项目版本（Release），保存版本链接和对应提交。
-- [ ] 发起 Pull Request，保存链接；按源仓库或老师说明确认目标。
-- [ ] 如申请云部署加分：公网地址可访问，博客包含该地址。
+- [ ] Required opening information table, Markdown and contents
+- [ ] Repository and standards links
+- [ ] Actual history screenshots and each member's commit count
+- [ ] Required-feature design explanations
+- [ ] Running screenshots and a complete demonstration video
+- [ ] Both members' responsibilities, problems and solutions
+- [ ] Contribution ratios totaling 100%
+- [ ] One PSP table for each member, separating estimated and actual minutes
+- [ ] Public URL if deployed
 
-### 每人分别发布的博客
+## Submission
 
-- [ ] 开头使用原帖指定的信息表格式，包含课程、团队、作业链接、目标、参考资料。
-- [ ] 使用 Markdown，包含目录。
-- [ ] 链接到 GitHub 团队仓库和代码规范文档。
-- [ ] 展示 GitHub 提交历史截图、每位成员的提交次数。
-- [ ] 说明收藏、多种联系方式、Excel 导入导出的实现思路。
-- [ ] 附真实程序运行截图和完整演示视频。
-- [ ] 写明两位成员的分工。
-- [ ] 写明两位成员的贡献百分比，合计 100%。
-- [ ] 分别说明两位成员遇到的问题及解决办法。
-- [ ] 包含两位成员各自的 PSP 表，区分预估与实际耗时。
-- [ ] 如部署：附可工作的公开应用链接。
+- [ ] Each publishes an individual blog in the course community.
+- [ ] Each submits their own published blog link through the assignment channel.
+- [ ] Staff can access all links, source and evidence.
+- [ ] Confirm successful submission before the deadline and retain receipts.
 
-### 最终提交
+## Suggested manual acceptance
 
-- [ ] 成员 A 的个人博客已在课程社区发布，并可正常访问。
-- [ ] 成员 B 的个人博客已在课程社区发布，并可正常访问。
-- [ ] 两人分别通过课程作业提交入口提交自己的博客链接。
-- [ ] 仓库、规范、Release、PR、图片和视频权限允许教学人员核验。
-- [ ] 在截止前确认作业入口显示成功提交，保留回执截图。
+| ID | Action | Expected result |
+| --- | --- | --- |
+| T01 | Run a clean complete checkout | README is reproducible. |
+| T02 | Save two phones, two emails, social and address | Values and labels persist. |
+| T03 | Favorite and open Favorites | Easy access |
+| T04 | Refresh/restart | Saved data remains. |
+| T05 | Unfavorite | Removed from Favorites |
+| T06 | Edit/remove one method | Other entries unchanged |
+| T07 | Export contacts | Genuine XLSX with labeled columns |
+| T08 | Import into isolated empty test data | Contracted fields preserved |
+| T09 | Transfer multilingual text, leading zeros and prefixes | Text preserved |
+| T10 | Import invalid files/headers/records | Specific errors; no partial batch |
+| T11 | Import duplicates | Documented policy followed |
+| T12 | Check empty states/filters | Usable feedback |
+| T13 | Open blog links/video | Staff can verify evidence. |
+| T14 | Access optional public site | Usable outside localhost |
 
-## B. 建议的实际验收用例
-
-填写“实测结果 / 证据”，不要把预期直接当作已通过。
-
-| 编号 | 操作 | 预期结果 | 实测结果 / 证据 |
-| --- | --- | --- | --- |
-| T01 | 按 README 从干净环境安装、构建和运行 | 命令可复现，界面正常出现 | 待执行 |
-| T02 | 新增联系人，录入两个电话、两个邮箱、社交账号和地址 | 详情完整显示，数据可保存 | 待执行 |
-| T03 | 收藏联系人并进入收藏视图 | 状态醒目，可快速找到该联系人 | 待执行 |
-| T04 | 刷新页面或重启程序 | 联系人、收藏和多条联系方式仍存在 | 待执行 |
-| T05 | 取消收藏 | 状态恢复，收藏视图中该项消失 | 待执行 |
-| T06 | 编辑并删除其中一条联系方式 | 只改动目标项，其余信息正确 | 待执行 |
-| T07 | 导出包含多个联系人的 Excel | 真正的 .xlsx，一人一行，列名清楚 | 待执行 |
-| T08 | 在空白测试数据环境中导入 T07 文件 | 联系人、各条联系方式及收藏状态按格式约定保留 | 待执行 |
-| T09 | 导出、导入中文、00123、+86 区号等测试值 | 中文正常，文本值不被转成数字或公式 | 待执行 |
-| T10 | 导入非 Excel 文件、缺必填列或无效记录 | 反馈具体错误，保存行为符合文档约定 | 待执行 |
-| T11 | 导入重复联系人 | 行为符合已说明的重复处理策略 | 待执行 |
-| T12 | 空数据、无收藏、无搜索结果（如有搜索） | 有清晰空状态，界面可继续操作 | 待执行 |
-| T13 | 打开博客所有链接及完整演示视频 | 教学人员具备必要访问权限 | 待执行 |
-| T14 | 如有云部署，从公网访问 | 应用实际可用，非 localhost 地址 | 不部署则不适用 |
-
-验收使用虚构联系人。不得为了演示而清空真实数据；Excel 往返测试使用隔离的测试数据环境。
+Use fictional data and record actual outcomes separately from expectations. See TEST_REPORT.md and DELIVERY_STATUS.md for current results and gaps.

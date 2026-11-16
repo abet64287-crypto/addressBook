@@ -1,27 +1,24 @@
-# 验收记录
+# Verification report
 
-日期：2026-11-15；环境：Windows、Python 3.12.7、Flask 3.0.3、openpyxl 3.1.5、pytest 7.4.4、Node.js 22.23.2。
+Environment: Windows, Python 3.12.7, Flask 3.0.3, openpyxl 3.1.5, pytest 7.4.4, Node.js 22.23.2.
 
-## 自动化
+## Automated checks
 
-执行 `python -m pytest -q`。覆盖：联系人新增/编辑/删除、重建应用后的数据库保留、收藏更新、联系方式校验、真实 XLSX 导出及向另一空数据库导入、收藏和标签完整保留、重复跳过、同名不同信息新增、中文与前导零、以等号开头的文本导出、公式拒绝、坏文件、错误行整份拒绝、10 MB 和 1000 行上限、写请求来源限制及不存在记录。
+The full local A+B project passed 30 tests on November 16, 2026. Packages were extracted into a new directory; paths were disjoint, the file manifest was complete and SHA-256 values matched. Separating tests by ownership did not remove assertions.
 
-最终运行的逐项结果见 `evidence/pytest.txt`。JavaScript 运行 `node --check addressbook/static/app.js` 进行语法检查。
+Coverage: CRUD, persistence across application instances, favorites, method validation, genuine XLSX, import into a separate empty database, labels/favorites/fields preserved, duplicates, same-name records with different data, multilingual text and leading zeros, formula-like text export, formula rejection, bad files/headers, atomic rejection, size/row limits, write protection, environment database paths and HTTPS Origin behavior.
 
-## 浏览器实测
+Results: evidence/pytest.txt. Both app.js and excel.js passed node --check. The Ubuntu installer passed Bash syntax checking; it has not run on the server.
 
-- 正常进入页面，显示 5 位虚构联系人和 2 位收藏联系人。
-- 点击收藏入口，列表变为 2 位，页面标题更新为“Favorites”。
-- 打开Alex Lin，详情显示两个电话、两个邮箱、微信账号和地址，前导零正确。
-- 打开编辑表单，显示全部六条联系方式及标签；点击保存后回到列表并显示“Contact saved.”。
-- 保存了主页、收藏和编辑截图，见 `evidence/`。
+## Browser acceptance
 
-预览初次在受限环境中连接超时，改为仅监听回环地址的允许访问环境后验证成功；没有修改系统防火墙或代理设置。
+- Five fictional contacts and two favorites displayed correctly.
+- Favorites showed two records and the correct heading.
+- Alex Lin displayed two phones, two emails, a social account and an address with leading zeros preserved.
+- The editor showed all six methods and labels; saving displayed Contact saved.
+- Main, Favorites and editor screenshots are under evidence/.
+- After extracting excel.js, template download and empty-template import succeeded: Imported 0; skipped 0 duplicates. All five contacts remained.
 
-## 验证范围
+## Verification limits
 
-自动化测试通过不代表所有平台均验证。尚未进行手机实机、云部署、真实两人 Git 流程或 CSDN 发布验收。完整视频尚未录制，浏览器文件上传/下载的全流程仍应在录屏前按 DEMO_SCRIPT 复核。没有执行性能压测；当前面向课程演示与小规模本地使用。
-
-2026-11-16 部署准备：新增环境变量数据路径、健康检查和 HTTPS 来源检查测试，本地共 29 项通过；远程服务和公网未验证。
-
-2026-11-16 分包验收：从 A/B 两个 ZIP 解压到全新目录，检查路径不重叠、文件清单完整、逐文件 SHA-256 一致；在合并目录执行测试，30 项全部通过（原检查拆为独立职责测试，未减少断言）。两个 JavaScript 脚本语法检查通过。浏览器已验证模板下载，并使用空模板导入，显示 Imported 0; skipped 0 duplicates.，现有 5 位联系人未变。远程尚未上传或部署。
+A alone is incomplete. Phone-device acceptance, load testing, public deployment and CSDN submission have not been performed. The complete video is not recorded. Repeat acceptance after B's PR and on the actual HTTPS deployment. Initial preview restrictions were resolved using localhost without changing system firewall or proxy settings.

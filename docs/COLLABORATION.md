@@ -1,75 +1,32 @@
-# 协作分工与 Git 流程草案
+# Collaboration plan
 
-状态：已确定团队仓库，认领范围见 [双人任务认领单](TASK_CLAIMS.md)。你已选择 A（联系人与界面），队友认领 B（Excel）；实际参与和贡献尚待完成。
+Repository: [addressBook](https://github.com/abet64287-crypto/addressBook). Member A is the repository owner, provisionally abet64287-crypto. Member B's name and GitHub username remain to be completed.
 
-## 1. 成员和仓库
+## Responsibilities
 
-| 项目 | 内容 |
-| --- | --- |
-| 团队名 | 【待填写】 |
-| 成员 A / GitHub 用户名 | 你；暂按仓库所有者 abet64287-crypto，实际使用账号可更新 |
-| 成员 B / GitHub 用户名 | 队友；账号待填写 |
-| 老师指定仓库 | 【待填写】 |
-| 团队仓库 | https://github.com/abet64287-crypto/addressBook（新建仓库，非 Fork） |
-| 基线分支与提交 | main；共同基线尚未上传 |
+A owns contacts, favorites, persistence, UI, shared fixtures and contact/deployment tests. B owns excel.py, excel_routes.py, static/excel.js, tests/test_excel.py and docs/EXCEL_FORMAT.md. Packages do not overlap. The application registers B's Blueprint and loads both scripts; A alone is incomplete.
 
-## 2. 建议分工
+A maintains the storage transaction used by imports. Both members verify data contracts, validation, duplicate behavior and results together. Notify the other member before changing an interface.
 
-| 成员 | 主要编码职责 | 对接与验收职责 |
-| --- | --- | --- |
-| A（你，已选择） | 联系人数据模型、多种联系方式、收藏逻辑、持久化与联系人界面 | 与 B 确认数据约定，参与 Excel 往返验收 |
-| B（队友） | Excel 导入导出、格式校验及对应交互、测试与格式文档 | 与 A 确认事务保存，参与收藏和联系方式验收 |
-| 两人 | 共同确认接口、交叉评审、修复联调问题 | 各自记录 PSP、整理真实问题；共同录制演示，各自发布博客 |
+## Git workflow
 
-按原项目结构调整边界。若实际工作量不均，提前调整，最终贡献比例依据真实工作确定。不能把成员安排成只写博客或只录视频。
+1. Use the selected team repository. It is not a fork; confirm the course's specified-fork requirement.
+2. Four initial A batches are uploaded to main. See UPLOAD_RECORD.md for immutable links and later updates.
+3. B adds the assigned files on feature/excel-transfer, then opens a PR to main. A reviews and verifies the complete project before merging.
+4. Preserve actual identities, timestamps and meaningful history. Record each member's contributions separately.
+5. Run complete tests and the manual demo, publish a Release and retain its source SHA.
+6. Each member publishes an individual blog containing both PSP tables, responsibilities, problems and contribution ratios totaling 100%.
 
-## 3. 编码前需要确定的约定
+## Actual records to complete
 
-- 联系人的唯一标识、收藏字段及联系方式表示方式。
-- 新增、编辑、删除和查询接口；若原项目已有接口，优先兼容。
-- Excel 表头、必填项、多个联系方式的表示方式、重复记录规则。
-- 成功和失败的反馈方式，导入失败时的数据保存策略。
-- 本地运行、验证命令、数据存储位置及演示测试数据。
-- 避免两人同时修改同一核心文件的交接顺序。
-
-## 4. Git 协作建议
-
-1. 使用用户指定的新建团队仓库，确认教学人员可访问。原题的 Fork 条款仍待向老师确认，不视为已满足。
-2. 两位成员使用各自的真实 Git 身份工作，不伪造作者或提交时间。
-3. 从共同基线建立功能分支，例如 `feature/contact-methods`、`feature/excel`。
-4. 每次提交包含可解释的实际改动，提交说明描述做了什么；仓库至少 3 次提交是原帖下限。
-5. 合并前运行适用检查，并由另一位成员查看变更；保持可以辨认两位作者的提交记录。
-6. 如选择压缩合并，先确认不会丢失作业所需的两人贡献证据；本任务建议保留真实分支提交。
-7. 集成后执行验收清单，发布可运行版本，例如 `v1.0.0`，记录对应提交。
-8. 发起 PR。原帖没有明确 PR 指向，需依据原仓库说明或老师要求确定，不能将草案流程误当成课程规定。
-
-至少三次提交应由真实开发自然形成，例如联系方式、收藏、Excel、集成修复；不要为凑次数拆空提交或让工具代替两位同学的贡献。
-
-## 5. 贡献统计
-
-在确认集成分支后，可在仓库内执行：
-
-```powershell
-git log --oneline --decorate
-git shortlog -sne HEAD
-```
-
-以上是查看命令，不代表已执行。Fork 会带入上游历史，因此需要排除继承的提交：记录实际开发基线后，对照团队本次改动范围统计两人的真实提交，并在博客说明统计口径。提交数不直接等于工作量或贡献比例。
-
-## 6. 讨论与问题记录
-
-| 日期 | 参与人 | 讨论或遇到的问题 | 决定 / 解决办法 | 对应提交或证据 |
+| Date | Participants | Problem or decision | Resolution | Commit/evidence |
 | --- | --- | --- | --- | --- |
-| 【实际日期】 | 【填写】 | 【实际发生后填写】 | 【填写】 | 【链接】 |
+| [Actual date] | [Names] | [Actual event] | [Outcome] | [Link] |
 
-## 7. 实际贡献比例
+| Member | Actual work and evidence | Contribution |
+| --- | --- | --- |
+| A | [Complete] | [Value]% |
+| B | [Complete] | [Value]% |
+| Total | | 100% |
 
-| 成员 | 实际工作与证据 | 比例 |
-| --- | --- | ---: |
-| A | 【完成后填写】 | 【填写】% |
-| B | 【完成后填写】 | 【填写】% |
-| 合计 | | 100% |
-
-## 分包交付
-
-已将 Excel 的 HTTP 接口、前端交互和测试拆为独立文件；两包互不覆盖。以 [GITHUB_HANDOFF.md](GITHUB_HANDOFF.md) 的文件清单和上传顺序为准，A 的初次上传是尚不能运行的中间状态，B 合并后再部署。
+Commit counts do not directly determine contribution ratios. See [task claims](TASK_CLAIMS.md) and [handoff](GITHUB_HANDOFF.md).

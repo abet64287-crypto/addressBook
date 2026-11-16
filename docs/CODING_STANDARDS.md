@@ -1,39 +1,28 @@
-# 代码规范
+# Coding standards
 
-本地实现采用以下规范。接入指定仓库后优先遵守其已有规范；博客应链接到团队仓库内本文件的实际地址。
+## General conventions
 
-## 通用约定
+- Use UTF-8 and descriptive names; Python indentation is four spaces.
+- Keep changes focused and follow the surrounding JavaScript/CSS style.
+- Separate domain validation, persistence, routing and interface responsibilities.
+- Keep interface labels, errors and new Excel headers in English. Contact values may use other languages.
+- Maintain the simple navy/light-gray interface without slogans or added branding.
+- Explain errors and actionable recovery; remove temporary debugging output.
+- Do not commit contact databases, credentials, environments, caches or temporary files. Use fictional demo data.
 
-- 使用 UTF-8；命名清楚，沿用项目现有目录、缩进和命名风格。
-- 一次改动围绕一个明确目的，避免无关重构和重复代码。
-- 数据读写、业务逻辑和界面职责清楚；收藏和联系方式使用统一的数据表示。
-- 提交前移除调试输出，错误信息说明发生了什么以及用户可以如何处理。
-- 不提交本地数据库、真实通讯录、密钥、依赖目录或临时文件；使用虚构演示数据。
-- README 包含环境要求、安装、运行、检查方式和数据保存位置。
+## Data rules
 
-## 数据和导入导出
+Preserve phone numbers and identifiers as text. Reuse the shared validator for forms and imports. Document duplicate policy and atomic failure behavior. Generate genuine XLSX, export user values as text and preserve labels, multiple methods and favorites. Use bound SQL parameters and close connections.
 
-- 电话、邮箱、账号等按合适的文本语义保存，不擅自转为数值。
-- 必填和格式校验集中实现，界面与导入规则保持一致。
-- 明确重复联系人和导入失败时的处理策略，避免用户误以为导入全部成功。
-- 使用项目适配的可靠 Excel 库生成和读取 .xlsx，明确兼容格式。
-- 导出时把用户文本作为文本写入，避免被表格软件解释成公式。
-- 为多条联系方式和收藏状态保留可往返的数据表达。
+## Verification and review
 
-## 验证与提交
-
-- 优先运行项目已有检查；验证关键业务行为及异常路径。
-- 重点检查收藏持久化、多条联系方式保存、Excel 导出后重新导入。
-- 提交说明描述具体变化，必要时补充原因及验证方式。
-- 使用真实作者身份，保留两位成员有意义的代码贡献。
-- 合并前由另一位成员查看差异；实际评审和结果在协作记录中保留。
-
-## 实际项目命令
-
-| 配置 | 实际内容 |
+| Item | Command or convention |
 | --- | --- |
-| 语言及运行时版本 | Python 3.12；浏览器原生 HTML/CSS/JavaScript |
-| 格式化 / 静态检查 | Python 四空格缩进；node --check addressbook/static/app.js |
-| 安装命令 | python -m pip install -r requirements-dev.txt |
-| 启动命令 | python run.py |
-| 测试或验收命令 | python -m pytest -q；按 DEMO_SCRIPT 验收 |
+| Runtime | Python 3.12; native HTML/CSS/JavaScript |
+| Install | python -m pip install -r requirements-dev.txt |
+| Local run | python run.py |
+| Complete-project tests | python -m pytest -q |
+| JavaScript checks | node --check addressbook/static/app.js; node --check addressbook/static/excel.js |
+| Manual acceptance | DEMO_SCRIPT.md |
+
+Run applicable checks before merging. Focus on persistence, multiple methods, Excel round trips and errors. Describe actual changes in commit messages, use each member's own identity and review the other member's work. Record actual outcomes and limitations. Follow additional source-repository rules if applicable.

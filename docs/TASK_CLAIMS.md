@@ -1,97 +1,51 @@
-# 双人任务认领
+# Two-member task claims
 
-团队仓库：<https://github.com/abet64287-crypto/addressBook>  
-分工日期：2026-11-16  
-提交截止：2026-11-17 23:59（北京时间）。
+Repository: [addressBook](https://github.com/abet64287-crypto/addressBook). Deadline: November 17, 2026, 23:59 UTC+8.
 
-**已选择：你认领 A，队友认领 B。** 以下是接下来各自需要认领、理解、完善、测试和评审的范围；已有实现作为集成基线，两位成员按认领范围开展后续验证与协作。最终贡献按实际参与和提交确定。
+The owner selected Part A; the teammate is assigned Part B. Record actual work, verification and review within these boundaries.
 
-## 分工总览
-
-| 项目 | A：你（已选择） | B：队友 |
+| Area | A: repository owner | B: teammate |
 | --- | --- | --- |
-| 任务名称 | Contact management, favorites and UI | Excel import/export and validation |
-| 核心功能 | 联系人增删改查、多条联系方式、收藏、搜索和分组、界面 | XLSX 模板、导出、导入、文件与行校验、重复策略 |
-| 主要文件 | `addressbook/domain.py`、`addressbook/store.py`、`addressbook/templates/index.html`、`addressbook/static/style.css` | `addressbook/excel.py`、`addressbook/excel_routes.py`、Excel 格式与验收文档 |
-| 接口范围 | 联系人 GET/POST/PUT/DELETE、收藏 PATCH | `/api/import`、`/api/export`、`/api/template` |
-| 页面范围 | `app.js` 中列表、详情、编辑、搜索、收藏 | `excel.js` 中导入事件及文件大小/结果反馈 |
-| 测试范围 | CRUD、持久化、联系方式校验、收藏、来源检查 | Excel 往返、兼容性、重复、坏文件、公式、行数与文件大小 |
-| 交付材料 | 联系人和收藏的设计说明、对应截图、本人 PSP 和问题 | Excel 格式说明、导入导出证据、本人 PSP 和问题 |
-| 分支建议 | `feature/contacts-ui` | `feature/excel-transfer` |
+| Features | CRUD, methods, favorites, search, groups and UI | Excel template, export, import and validation |
+| Python | domain.py, store.py, __init__.py | excel.py, excel_routes.py |
+| Browser | index.html, app.js, style.css | excel.js |
+| Tests | Contact/deployment tests and shared fixtures | Excel tests |
+| Documents | General design, operation and integration | Excel format and transfer evidence |
+| Branch | feature/contacts-ui for later changes | feature/excel-transfer |
 
-代码已拆分为互不覆盖的两包：A 维护 `__init__.py`、`app.js`、`tests/test_contacts.py` 和公共测试配置；B 维护 `excel_routes.py`、`excel.js` 和 `tests/test_excel.py`。A 的应用工厂注册 B 的 Blueprint，HTML 按顺序加载两个脚本；合并后才可完整运行。`store.import_contacts` 的持久化事务由 A 维护，B 负责与 A 一起确认其导入行为。
+## A: Contact management, favorites and UI
 
-## Task A — Contact management, favorites and UI
+Claimant: repository owner, provisionally abet64287-crypto.
 
-认领人：你；GitHub 用户名暂按仓库所有者 `abet64287-crypto` 记录，若使用其他账号则更新。
+- [ ] Understand and verify the contact model and storage.
+- [ ] Verify/improve create, edit, delete and dynamic method rows.
+- [ ] Verify favorites, filtering and persistence after restart.
+- [ ] Check search, groups, empty states, English feedback and narrow-screen behavior.
+- [ ] Preserve the navy/light-gray interface without slogans or branding.
+- [ ] Submit actual improvements/fixes with relevant verification.
+- [ ] Review B and participate in Excel round-trip acceptance.
 
-### 要做的工作
+Acceptance: retain two phones, two emails, a social account and an address with separate labels. Favorites persist; editing, deletion, search and groups work. Provide actual commits, screenshots, personal PSP time and problems encountered.
 
-- [ ] 阅读并实际运行联系人核心代码，确认数据模型与 B 使用的 Excel 记录结构一致。
-- [ ] 验证并完善联系人新增、编辑、删除及电话、邮箱、社交账号、地址的动态增删。
-- [ ] 验证并完善收藏、取消收藏、收藏列表和刷新 / 重启后的持久化。
-- [ ] 检查搜索、分组、空状态、英文错误提示及窄屏布局。
-- [ ] 维护英文、深蓝 / 浅灰界面，不添加品牌名、口号或绿色配色。
-- [ ] 提交实际发现的问题修复、代码改进及对应测试，记录原因和结果。
-- [ ] 评审 B 的 Excel 代码，并参与往返验收。
+## B: Excel transfer and validation
 
-### 验收标准
+Claimant: teammate; GitHub username pending.
 
-1. 同一个联系人可保存两个电话、两个邮箱、一个社交账号和一个地址，标签可区分。
-2. 收藏后可在 Favorites 找到，取消后移除；刷新和重启仍正确。
-3. 联系人可编辑和删除，搜索及分组有效。
-4. 前端反馈为英文，没有新增装饰性文案或绿色配色。
-5. 对应测试通过，提供本人的真实提交和联系人操作截图。
+- [ ] Understand indexed columns and the shared validator.
+- [ ] Verify genuine XLSX, English headers and one contact per row.
+- [ ] Round-trip all fields into an isolated empty database.
+- [ ] Check leading zeros, prefixes, multilingual values and special characters.
+- [ ] Check invalid files/headers/emails/formulas and row/size limits.
+- [ ] Confirm atomic rejection, duplicate skipping and same-name/different-data insertion.
+- [ ] Submit actual improvements/fixes, tests and format documentation.
+- [ ] Provide transfer evidence, review A and record personal PSP time and problems.
 
-## Task B — Excel import/export and validation
+Acceptance: compatible workbooks open correctly; values, labels and favorites survive transfer; counts are accurate; errors leave no partial batch. Verify actual browser transfer as well as tests.
 
-认领人：队友（GitHub 用户名待填写）。
+## Shared interfaces and delivery
 
-### 要做的工作
+Contacts contain name/company/group/notes/favorite/methods. Methods contain type/label/value, using phone/email/social/address. IDs are not import-update keys. A registers B's Blueprint and supplies api/refresh/toast; B passes validated records to transactional storage.
 
-- [ ] 阅读并实际运行 `excel.py`，能说明动态列如何保存多条联系方式和标签。
-- [ ] 验证模板和导出均为真实 `.xlsx`，一人一行，表头为英文。
-- [ ] 验证导出后导入隔离的空数据库，姓名、公司、分组、收藏、备注、联系方式及标签均不丢失。
-- [ ] 验证前导零、区号、中文用户数据和特殊字符仍能正确往返；英文界面不限制联系人内容语言。
-- [ ] 验证坏文件、缺 Name、重复 / 未知表头、错误邮箱、公式和超过限制时的英文报错。
-- [ ] 确认错误行导致整份拒绝；完全相同记录跳过，同名不同内容新增，不覆盖现有记录。
-- [ ] 提交实际发现的问题修复、代码改进及对应测试，维护 README 中的 Excel 格式说明。
-- [ ] 录制 / 提供 Excel 导出、重新导入和错误文件处理部分的演示证据。
-- [ ] 评审 A 的联系方式模型和保存行为，填写自己的 PSP 和问题记录。
+A is uploaded to main. B must submit a PR and merge after acceptance before deployment. Both members record their own work, review each other, complete a full video and publish separate blogs. Contribution percentages must total 100% and reflect actual work.
 
-### 验收标准
-
-1. 导出文件可由 Excel 或其他兼容软件打开，表头英文且一人一行。
-2. 一位联系人含多条信息，往返后值、标签、收藏等一致，前导零保留。
-3. 重复导入正确报告新增和跳过数。
-4. 无效文件返回具体错误，数据库没有部分写入。
-5. 模板可用，接口与界面导入导出均验证，测试通过，提供本人的真实提交和 Excel 操作证据。
-
-### 当前认领选择
-
-你已选择 A，负责联系人管理、多种联系方式、收藏、持久化和界面；队友负责 B 的 Excel 导入导出与校验。两人按上述边界完成实际工作并相互评审。
-
-## 共享约定
-
-- 联系人结构：`{name, company, group, notes, favorite, methods}`；每条联系方式为 `{type, label, value}`，类型是 phone/email/social/address。数据库 id 不作为导入更新键。
-- B 输出已经通过领域校验的记录列表，A 的存储层事务保存并统计重复；改变模型先相互通知。
-- 两人各自使用真实 Git 账号和身份；代码、测试、文档提交说明描述实际改动，按实际参与记录共同基线和后续变更的分工。
-- 各自单独填写 PSP 预估和实际时间，各自写问题、解决方法和个人总结；共同核定贡献比例，合计 100%，不预先宣称各占 50%。
-- 共同录制一段完整视频；各自发布自己的博客，附双方 PSP、分工和提交统计。
-
-## 提交与合并顺序
-
-1. 在团队仓库上传共同基线，提交说明如 `chore: add initial project baseline`，不包含 `instance/`、密钥、缓存或虚构作者。
-2. 两人阅读本认领单，分别在自己的分支完成实际改进和验证；开始前填写各自 PSP 预估。
-3. A 创建联系人 / 界面的 PR，B 评审；完成合并后，B 拉取最新 main，完成 Excel 部分的 PR，A 评审。
-4. 集成后执行 `python -m pytest -q` 和 `node --check addressbook/static/app.js`，再按演示脚本手动验证。
-5. 仓库至少三次真实提交是原题下限；正常基线加两人的实际开发即可形成，不需要空提交凑数。
-6. 统计双方提交、截图、录屏、发布 Release、补齐博客链接并在截止前分别提交。
-
-当前已确认你选择 A，并按授权分批提交 A 部分；准确批次和链接见 UPLOAD_RECORD.md。B 留给队友，尚未创建 Issue、团队集成 PR 或部署。
-
-题目仍提到 Fork 指定仓库。用户选择的团队仓库是新建仓库（非 Fork），本方案按用户选择使用；是否满足该课程条款需向老师确认，不将其标为已满足。
-
-## 上传和服务器拉取
-
-详见 [GitHub 分工交付步骤](GITHUB_HANDOFF.md)。两包文件清单在交付目录 file-ownership.json；先由 A 上传 main，再由 B 上传独立分支并发起 PR，验收合并后服务器从 GitHub clone。
+See [handoff](GITHUB_HANDOFF.md) and [upload records](UPLOAD_RECORD.md). The chosen new repository's compatibility with the course's specified-fork requirement remains to be confirmed.
