@@ -1,0 +1,6 @@
+# Add alongside existing calculator sites, not inside them.
+# First create the contacts DNS A record pointing at the server.
+contacts.calculator-demo.site {
+    encode gzip
+    reverse_proxy 127.0.0.1:8001
+}
