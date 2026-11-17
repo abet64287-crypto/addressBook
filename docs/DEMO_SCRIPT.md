@@ -33,4 +33,4 @@ Play the full recording afterward. Confirm the workbook opens and the video link
 - [ ] Optional public application
 - [ ] Each blog and final submission receipt
 
-Main/Favorites/editor images exist under evidence/. The initial four-commit image is saved locally in team-handoff. Workbook/import images, complete recording, final history and submission receipts remain to be completed.
+Main/Favorites/editor images are available in [evidence/](evidence/). The old four-commit history screenshot was a local handoff artifact and is not included in this repository. Capture the current main history after the commit-message update and upload it with the workbook/import images. The complete recording and submission receipts remain to be completed.

@@ -1,6 +1,6 @@
 # Address Book
 
-> Current repository status (November 17, 2026): Member A's contact/UI files and Member B's Excel modules are uploaded to main. B's five files were added by hajiyao in [0f11165](https://github.com/abet64287-crypto/addressBook/commit/0f1116596844622d09149fe9e157e3df8afcd0cc). The repository contains the complete A+B source. The complete local project previously passed 30 tests; repeat acceptance on the current checkout before release or deployment.
+> Current repository status (November 17, 2026): Member A's contact/UI files and Member B's Excel modules are uploaded to main. B's five files were added by hajiyao in [0aff42a](https://github.com/abet64287-crypto/addressBook/commit/0aff42af796f91cc6eb13a95b1a64d50eda55eb3). The repository contains the complete A+B source. The complete local project previously passed 30 tests; repeat acceptance on the current checkout before release or deployment.
 
 A pair-programming address book using Flask, SQLite, openpyxl and an English HTML/CSS/JavaScript interface. Features include contact CRUD, favorites, multiple labeled contact methods, search, groups and Excel import/export.
 
@@ -14,6 +14,8 @@ A pair-programming address book using Flask, SQLite, openpyxl and an English HTM
 The complete A+B source is available on main. Python 3.12 is recommended.
 
 ```powershell
+git clone https://github.com/abet64287-crypto/addressBook.git
+cd addressBook
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements-dev.txt
 .\.venv\Scripts\python.exe seed_demo.py
@@ -67,6 +69,6 @@ Tests use temporary databases and cover CRUD, persistence, favorites, validation
 
 ## Deployment and outstanding work
 
-Prepared deployment uses a separate systemd service on localhost port 8001, alongside the calculator on 8000, behind the existing Caddy instance. Data is stored under /var/lib/addressbook. Health endpoint: /api/health. Remote installation has not been performed.
+Prepared Ubuntu deployment uses Waitress behind Caddy with a separate systemd service on localhost port 8001. Data is stored under /var/lib/addressbook; the health endpoint is /api/health. See [deployment instructions](docs/DEPLOYMENT.md) for the original server-specific example, and adapt its hostname and paths to your environment. Remote installation has not been performed.
 
 The selected repository was newly created, not forked; confirm the assignment's specified-fork requirement. The Excel upload is complete. Current-checkout acceptance, the required PR, Release, complete video, individual PSP records, personal blogs and final submissions remain outstanding. Each member should record actual participation and review the other's work.

@@ -7,8 +7,8 @@ Source: [assignment](https://bbs.csdn.net/topics/620593436). Deadline: November 
 - [ ] Confirm the specified-fork requirement for the selected newly created repository.
 - [ ] Agree on boundaries, responsibilities, standards and Git workflow.
 - [x] Both accounts have code uploads on main: abet64287-crypto for contacts/UI and hajiyao for the five Excel files. Document actual participation and review in each blog.
-- [x] At least three repository commits: six commits through 0f11165, with five by abet64287-crypto and one by hajiyao before this documentation correction. Refresh final counts after later work.
-- [x] B's five Excel files were uploaded directly to main on November 17, 2026 in [0f11165](https://github.com/abet64287-crypto/addressBook/commit/0f1116596844622d09149fe9e157e3df8afcd0cc).
+- [x] At least three repository commits: eight commits after this documentation review, with five by abet64287-crypto and three by hajiyao (one Excel upload and two documentation updates). Refresh counts after later work.
+- [x] B's five Excel files were uploaded directly to main on November 17, 2026 in [0aff42a](https://github.com/abet64287-crypto/addressBook/commit/0aff42af796f91cc6eb13a95b1a64d50eda55eb3).
 - [ ] Verify favorites, multiple methods, Excel and interface on the current complete checkout.
 - [ ] Provide reproducible source, installation and operation instructions.
 - [ ] Publish a Release and retain its source SHA/link.

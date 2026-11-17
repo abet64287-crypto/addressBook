@@ -1,13 +1,13 @@
 # Two-member GitHub handoff and deployment
 
-Repository: [addressBook](https://github.com/abet64287-crypto/addressBook). A owns contacts/UI; B owns Excel. Both members' files are now on main; the Excel upload was completed on November 17, 2026 in [0f11165](https://github.com/abet64287-crypto/addressBook/commit/0f1116596844622d09149fe9e157e3df8afcd0cc).
+Repository: [addressBook](https://github.com/abet64287-crypto/addressBook). A owns contacts/UI; B owns Excel. Both members' files are now on main; the Excel upload was completed on November 17, 2026 in [0aff42a](https://github.com/abet64287-crypto/addressBook/commit/0aff42af796f91cc6eb13a95b1a64d50eda55eb3).
 
 | Package | Owner | Content |
 | --- | --- | --- |
 | address-book-A.zip | Repository owner | Contacts, storage, favorites/API, main UI, shared helpers, contact/deployment tests and general documents |
 | address-book-B.zip | Teammate | Excel parser, Blueprint, browser transfer, tests and format guide |
 
-Archive paths are relative to the repository root. Upload extracted contents, not ZIPs or another enclosing directory. The root should directly contain README.md, run.py, requirements.txt, addressbook/, tests/ and deploy/. The local file-ownership.json records owners and SHA-256 hashes; environments, databases, caches and Git metadata are excluded.
+Archive paths are relative to the repository root. Upload extracted contents, not ZIPs or another enclosing directory. The root should directly contain README.md, run.py, requirements.txt, addressbook/, tests/ and deploy/. The repository is the reviewable source deliverable; local ZIP packages and ownership manifests are optional handoff artifacts and are not included here. Environments, databases, caches and credentials are excluded.
 
 ## A upload status
 
@@ -15,7 +15,7 @@ Four functional A commits are on main, followed by an English-documentation upda
 
 ## B upload status and remaining PR
 
-B uploaded all five assigned files directly to main under the hajiyao account on November 17, 2026 in [0f11165](https://github.com/abet64287-crypto/addressBook/commit/0f1116596844622d09149fe9e157e3df8afcd0cc). The upload added these files without replacing A's files:
+B uploaded all five assigned files directly to main under the hajiyao account on November 17, 2026 in [0aff42a](https://github.com/abet64287-crypto/addressBook/commit/0aff42af796f91cc6eb13a95b1a64d50eda55eb3). The upload added these files without replacing A's files:
 
 ```text
 addressbook/excel.py

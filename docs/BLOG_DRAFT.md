@@ -1,7 +1,3 @@
-# Extreme Programming: Address Book
-
-> Draft only. Replace placeholders with actual evidence before publishing. Each member publishes an individual personal blog.
-
 | Item | Content |
 | --- | --- |
 | Course for This Assignment | [2601_FZU-MU_SE](https://bbs.csdn.net/forums/2601_MU_SE_FZU) |
@@ -9,6 +5,14 @@
 | Assignment Requirements | [Extreme Programming](https://bbs.csdn.net/topics/620593436) |
 | Objectives of This Assignment | Implement address book features and practice pair collaboration, Git and software engineering |
 | Other References | [Sources actually used] |
+
+# Extreme Programming: Address Book
+
+> Draft only. Replace placeholders with actual evidence before publishing. Each member publishes an individual personal blog and includes both PSP tables.
+
+Author: [Your name and student ID]
+
+Partner: [Partner name and student ID]
 
 ## Contents
 
@@ -36,7 +40,7 @@
 
 ## Implementation
 
-The local project uses Python 3.12, Flask 3.0.3, SQLite, openpyxl 3.1.5 and native HTML/CSS/JavaScript. A's contacts/UI and B's five Excel files are uploaded to main. B's upload was made by hajiyao on November 17, 2026 in [0f11165](https://github.com/abet64287-crypto/addressBook/commit/0f1116596844622d09149fe9e157e3df8afcd0cc). The reported 30-test result comes from the complete local A+B implementation on November 16; repeat acceptance on the current checkout.
+The local project uses Python 3.12, Flask 3.0.3, SQLite, openpyxl 3.1.5 and native HTML/CSS/JavaScript. A's contacts/UI and B's five Excel files are uploaded to main. B's upload was made by hajiyao on November 17, 2026 in [0aff42a](https://github.com/abet64287-crypto/addressBook/commit/0aff42af796f91cc6eb13a95b1a64d50eda55eb3). The reported 30-test result comes from the complete local A+B implementation on November 16; repeat acceptance on the current checkout.
 
 The factory registers contact endpoints and an Excel Blueprint. Domain validation is shared by forms and spreadsheets. SQLite stores stable IDs and contact data including a favorite boolean and typed, labeled method arrays.
 
@@ -64,8 +68,10 @@ Complete demonstration video: [Link or embed]. Screenshots do not replace the re
 
 | Member | GitHub username | Actual assignment commits | Representative commits |
 | --- | --- | ---: | --- |
-| A | abet64287-crypto [confirm] | [Final count] | [Links] |
-| B | [Username] | [Actual count] | [Links] |
+| A | abet64287-crypto [confirm] | 5 | [Contact API](https://github.com/abet64287-crypto/addressBook/commit/151093d84c6bce3687ad6e59f8653f876ac08cf6) |
+| B | hajiyao [confirm member mapping] | 3 | [Excel import/export, template and validation](https://github.com/abet64287-crypto/addressBook/commit/0aff42af796f91cc6eb13a95b1a64d50eda55eb3) |
+
+Snapshot after this documentation review: eight commits on main, including code and documentation commits. B's three commits comprise the Excel upload and two documentation updates. Refresh counts and screenshots if further commits are added.
 
 ## Responsibilities and contribution ratios
 

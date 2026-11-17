@@ -1,6 +1,6 @@
 # Excel module — Member B
 
-状态：2026 年 11 月 17 日，hajiyao 已通过 [0f11165](https://github.com/abet64287-crypto/addressBook/commit/0f1116596844622d09149fe9e157e3df8afcd0cc) 将 Excel 模块、交互脚本、测试及本说明上传到 main。
+状态：2026 年 11 月 17 日，hajiyao 已通过 [0aff42a](https://github.com/abet64287-crypto/addressBook/commit/0aff42af796f91cc6eb13a95b1a64d50eda55eb3) 将 Excel 模块、交互脚本、测试及本说明上传到 main。
 
 认领：队友。模块文件：`addressbook/excel.py`、`addressbook/excel_routes.py`、`addressbook/static/excel.js`、`tests/test_excel.py`。
 

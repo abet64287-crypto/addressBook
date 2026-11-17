@@ -11,7 +11,9 @@ The owner selected Part A; the teammate is assigned Part B. Record actual work, 
 | Browser | index.html, app.js, style.css | excel.js |
 | Tests | Contact/deployment tests and shared fixtures | Excel tests |
 | Documents | General design, operation and integration | Excel format and transfer evidence |
-| Branch | feature/contacts-ui for later changes | feature/excel-transfer |
+| Suggested branch for future changes | feature/contacts-ui | feature/excel-transfer |
+
+These branch names are workflow suggestions. The recorded Excel upload was made directly to main; see [upload records](UPLOAD_RECORD.md). The unchecked items below are personal verification tasks, not claims that the source modules are missing.
 
 ## A: Contact management, favorites and UI
 
@@ -29,7 +31,7 @@ Acceptance: retain two phones, two emails, a social account and an address with 
 
 ## B: Excel transfer and validation
 
-Claimant: teammate; the Excel files were uploaded by hajiyao on November 17, 2026 in [0f11165](https://github.com/abet64287-crypto/addressBook/commit/0f1116596844622d09149fe9e157e3df8afcd0cc). Complete the student's name and confirm the account mapping in the blog.
+Claimant: teammate; the Excel files were uploaded by hajiyao on November 17, 2026 in [0aff42a](https://github.com/abet64287-crypto/addressBook/commit/0aff42af796f91cc6eb13a95b1a64d50eda55eb3). Complete the student's name and confirm the account mapping in the blog.
 
 - [ ] Understand indexed columns and the shared validator.
 - [ ] Verify genuine XLSX, English headers and one contact per row.
@@ -46,6 +48,6 @@ Acceptance: compatible workbooks open correctly; values, labels and favorites su
 
 Contacts contain name/company/group/notes/favorite/methods. Methods contain type/label/value, using phone/email/social/address. IDs are not import-update keys. A registers B's Blueprint and supplies api/refresh/toast; B passes validated records to transactional storage.
 
-A and B are uploaded to main. B's five files were added directly by hajiyao in [0f11165](https://github.com/abet64287-crypto/addressBook/commit/0f1116596844622d09149fe9e157e3df8afcd0cc); no PR accompanied the upload. Review and verify the complete checkout before deployment. The required PR remains outstanding and should document actual follow-up work. Both members record their own work, review each other, complete a full video and publish separate blogs. Contribution percentages must total 100% and reflect actual work.
+A and B are uploaded to main. B's five files were added directly by hajiyao in [0aff42a](https://github.com/abet64287-crypto/addressBook/commit/0aff42af796f91cc6eb13a95b1a64d50eda55eb3); no PR accompanied the upload. Review and verify the complete checkout before deployment. The required PR remains outstanding and should document actual follow-up work. Both members record their own work, review each other, complete a full video and publish separate blogs. Contribution percentages must total 100% and reflect actual work.
 
 See [handoff](GITHUB_HANDOFF.md) and [upload records](UPLOAD_RECORD.md). The chosen new repository's compatibility with the course's specified-fork requirement remains to be confirmed.

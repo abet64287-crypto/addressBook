@@ -12,7 +12,7 @@ A maintains the storage transaction used by imports. Both members verify data co
 
 1. Use the selected team repository. It is not a fork; confirm the course's specified-fork requirement.
 2. Four initial A batches are uploaded to main. See UPLOAD_RECORD.md for immutable links and later updates.
-3. B's five assigned files were uploaded directly to main by hajiyao in [0f11165](https://github.com/abet64287-crypto/addressBook/commit/0f1116596844622d09149fe9e157e3df8afcd0cc). No PR accompanied that upload. Review and verify the current checkout, then create the required PR for a real follow-up change; use a feature branch and review before merging future work.
+3. B's five assigned files were uploaded directly to main by hajiyao in [0aff42a](https://github.com/abet64287-crypto/addressBook/commit/0aff42af796f91cc6eb13a95b1a64d50eda55eb3). No PR accompanied that upload. Review and verify the current checkout, then create the required PR for a real follow-up change; use a feature branch and review before merging future work.
 4. Preserve actual identities, timestamps and meaningful history. Record each member's contributions separately.
 5. Run complete tests and the manual demo, publish a Release and retain its source SHA.
 6. Each member publishes an individual blog containing both PSP tables, responsibilities, problems and contribution ratios totaling 100%.

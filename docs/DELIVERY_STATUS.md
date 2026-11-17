@@ -13,7 +13,7 @@ Reviewed November 17, 2026. Source: [assignment](https://bbs.csdn.net/topics/620
 | Design, operation and standards | Documents available | README, DESIGN, CODING_STANDARDS |
 | Blog structure and PSP | Draft and templates available | BLOG_DRAFT, BLOG_TEMPLATE |
 
-The complete local A+B packages passed 30 tests on November 16, 2026. B's five files are now present on main after [0f11165](https://github.com/abet64287-crypto/addressBook/commit/0f1116596844622d09149fe9e157e3df8afcd0cc). Repeat acceptance on the current checkout before release; no new test run or coursework marks are claimed here.
+The complete local A+B packages passed 30 tests on November 16, 2026. B's five files are now present on main after [0aff42a](https://github.com/abet64287-crypto/addressBook/commit/0aff42af796f91cc6eb13a95b1a64d50eda55eb3). Repeat acceptance on the current checkout before release; no new test run or coursework marks are claimed here.
 
 ## Remote and submission status
 
@@ -21,10 +21,10 @@ The complete local A+B packages passed 30 tests on November 16, 2026. B's five f
 | --- | --- |
 | Repository | Public, newly created rather than forked; confirm the course requirement. |
 | A uploads | Four initial functional commits; see UPLOAD_RECORD for the English-documentation update. |
-| B upload | Complete: hajiyao uploaded all five Excel files directly to main on November 17 in [0f11165](https://github.com/abet64287-crypto/addressBook/commit/0f1116596844622d09149fe9e157e3df8afcd0cc). |
+| B upload | Complete: hajiyao uploaded all five Excel files directly to main on November 17 in [0aff42a](https://github.com/abet64287-crypto/addressBook/commit/0aff42af796f91cc6eb13a95b1a64d50eda55eb3). |
 | Required PR | Not created; the direct upload did not create a PR. |
 | Current-checkout acceptance | Repeat automated and manual verification before release. |
-| Minimum three commits | Before this documentation correction: six commits through 0f11165, with five by abet64287-crypto and one by hajiyao; both accounts have code uploads. Update final counts after later commits. |
+| Minimum three commits | After this documentation review: eight commits, five by abet64287-crypto and three by hajiyao (one Excel upload and two documentation updates). Both accounts have code uploads; refresh counts after later commits. |
 | Repository/standards links | Available in the team repository |
 | Release | Not published |
 | History screenshot | Initial four-commit screenshot saved locally; refresh after later work |

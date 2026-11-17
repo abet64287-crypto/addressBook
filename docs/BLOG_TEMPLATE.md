@@ -1,7 +1,3 @@
-# Extreme Programming: Address Book
-
-> Draft only. Replace placeholders with actual evidence before publishing. Each member publishes an individual personal blog.
-
 | Item | Content |
 | --- | --- |
 | Course for This Assignment | [2601_FZU-MU_SE](https://bbs.csdn.net/forums/2601_MU_SE_FZU) |
@@ -9,6 +5,14 @@
 | Assignment Requirements | [Extreme Programming](https://bbs.csdn.net/topics/620593436) |
 | Objectives of This Assignment | Implement address book features and practice pair collaboration, Git and software engineering |
 | Other References | [Sources actually used] |
+
+# Extreme Programming: Address Book
+
+> Draft only. Replace placeholders with actual evidence before publishing. Each member publishes an individual personal blog and includes both PSP tables.
+
+Author: [Your name and student ID]
+
+Partner: [Partner name and student ID]
 
 ## Contents
 
@@ -51,7 +55,7 @@ Complete demonstration video: [Link or embed]. Screenshots do not replace the re
 | Member | GitHub username | Actual assignment commits | Representative commits |
 | --- | --- | ---: | --- |
 | A | abet64287-crypto [confirm] | [Final count] | [Links] |
-| B | [Username] | [Actual count] | [Links] |
+| B | hajiyao [confirm member mapping] | [Actual count] | [Links] |
 
 ## Responsibilities and contribution ratios
 
