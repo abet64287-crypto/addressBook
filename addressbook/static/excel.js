@@ -1,0 +1,3 @@
+'use strict';
+// Member B: uses api(), refresh() and toast() from app.js.
+$('#import').onclick=()=>$('#file').click();$('#file').onchange=async e=>{const file=e.target.files[0];if(!file)return;if(file.size>10*1024*1024){toast('File exceeds the 10 MB limit.',true);e.target.value='';return;}const data=new FormData();data.append('file',file);$('#import').disabled=true;try{const result=await api('/api/import',{method:'POST',body:data});await refresh();toast(`Imported ${result.imported}; skipped ${result.skipped} duplicates.`);}catch(err){toast(err.message,true);}finally{$('#import').disabled=false;e.target.value='';}};
