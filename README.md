@@ -1,10 +1,11 @@
 # Address Book
 
-> Current repository status (November 17, 2026): Member A's contact/UI files and Member B's Excel modules are uploaded to main. B's five files were added by hajiyao in [0aff42a](https://github.com/abet64287-crypto/addressBook/commit/0aff42af796f91cc6eb13a95b1a64d50eda55eb3). The repository contains the complete A+B source. The complete local project previously passed 30 tests; repeat acceptance on the current checkout before release or deployment.
+> Current repository status (November 17, 2026): The complete A+B source is uploaded to main, and the application is deployed at [contacts.calculator-demo.site](https://contacts.calculator-demo.site/). Member B's five Excel files were added by hajiyao in [0aff42a](https://github.com/abet64287-crypto/addressBook/commit/0aff42af796f91cc6eb13a95b1a64d50eda55eb3). The local test suite passed all 30 tests on November 17. The public homepage and health endpoint were also checked successfully; full production acceptance is separate from these availability checks.
 
 A pair-programming address book using Flask, SQLite, openpyxl and an English HTML/CSS/JavaScript interface. Features include contact CRUD, favorites, multiple labeled contact methods, search, groups and Excel import/export.
 
 - Repository: [addressBook](https://github.com/abet64287-crypto/addressBook)
+- Live Application: [contacts.calculator-demo.site](https://contacts.calculator-demo.site/)
 - Assignment: [Extreme Programming](https://bbs.csdn.net/topics/620593436)
 - Deadline: **November 17, 2026, 23:59 (UTC+8 / Beijing time)**
 - Ownership: A owns contacts and UI; B owns Excel transfer and validation.
@@ -48,7 +49,7 @@ node --check addressbook/static/app.js
 node --check addressbook/static/excel.js
 ```
 
-Tests use temporary databases and cover CRUD, persistence, favorites, validation, Excel round trips, duplicates, leading zeros, formulas, atomic rejection, limits and deployment configuration. The recorded 30-test result is from the complete local project on November 16, 2026; it is not a new test run of the November 17 checkout.
+Tests use temporary databases and cover CRUD, persistence, favorites, validation, Excel round trips, duplicates, leading zeros, formulas, atomic rejection, limits and deployment configuration. The suite was rerun locally on November 17, 2026, against [6cc1cb1](https://github.com/abet64287-crypto/addressBook/commit/6cc1cb11b7ca8878b59be489fecdb675eb28780f), with the result `30 passed in 1.37s`. The subsequent [871ebb9](https://github.com/abet64287-crypto/addressBook/commit/871ebb92c77d82f2eaced6fedf87662402bff207) only translated the Excel format guide; application code was unchanged. This local result does not replace acceptance testing of the deployed service.
 
 ## Responsibilities and documents
 
@@ -67,8 +68,15 @@ Tests use temporary databases and cover CRUD, persistence, favorites, validation
 - [Demo script](docs/DEMO_SCRIPT.md) and [submission checklist](docs/SUBMISSION_CHECKLIST.md)
 - [GitHub handoff](docs/GITHUB_HANDOFF.md), [upload records](docs/UPLOAD_RECORD.md) and [Ubuntu deployment](docs/DEPLOYMENT.md)
 
-## Deployment and outstanding work
+## Cloud deployment and outstanding work
 
-Prepared Ubuntu deployment uses Waitress behind Caddy with a separate systemd service on localhost port 8001. Data is stored under /var/lib/addressbook; the health endpoint is /api/health. See [deployment instructions](docs/DEPLOYMENT.md) for the original server-specific example, and adapt its hostname and paths to your environment. Remote installation has not been performed.
+The application is deployed and publicly accessible over HTTPS:
 
-The selected repository was newly created, not forked; confirm the assignment's specified-fork requirement. The Excel upload is complete. Current-checkout acceptance, the required PR, Release, complete video, individual PSP records, personal blogs and final submissions remain outstanding. Each member should record actual participation and review the other's work.
+- Application: [https://contacts.calculator-demo.site/](https://contacts.calculator-demo.site/)
+- Health check: [https://contacts.calculator-demo.site/api/health](https://contacts.calculator-demo.site/api/health)
+
+On November 17, 2026, both URLs returned HTTP 200, and the health endpoint returned `{"status":"ok"}`. These checks verify availability, not every application workflow.
+
+See [deployment instructions](docs/DEPLOYMENT.md) for an Ubuntu example using Waitress behind Caddy, a separate systemd service on localhost port 8001, and data under `/var/lib/addressbook`. Its hostname, paths, and service settings are examples; use the actual server configuration when maintaining the deployed application.
+
+The selected repository was newly created, not forked; confirm the assignment's specified-fork requirement. The Excel upload, local automated retest, and public deployment are complete. Full acceptance of the deployed workflows, the required PR, Release, complete video, individual PSP records, personal blogs and final submissions remain outstanding. Each member should record actual participation and review the other's work.
