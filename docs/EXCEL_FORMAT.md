@@ -1,29 +1,33 @@
-# Excel module — Member B
+# Excel Module — Member B
 
-状态：2026 年 11 月 17 日，hajiyao 已通过 [0aff42a](https://github.com/abet64287-crypto/addressBook/commit/0aff42af796f91cc6eb13a95b1a64d50eda55eb3) 将 Excel 模块、交互脚本、测试及本说明上传到 main。
+Status: On November 17, 2026, hajiyao uploaded the Excel modules, browser interaction script, tests, and this guide to main in [0aff42a](https://github.com/abet64287-crypto/addressBook/commit/0aff42af796f91cc6eb13a95b1a64d50eda55eb3).
 
-认领：队友。模块文件：`addressbook/excel.py`、`addressbook/excel_routes.py`、`addressbook/static/excel.js`、`tests/test_excel.py`。
+Owner: Member B. Module files: `addressbook/excel.py`, `addressbook/excel_routes.py`, `addressbook/static/excel.js`, and `tests/test_excel.py`.
 
-## 格式
+## Workbook Format
 
-真正的 `.xlsx`，一个工作表，一位联系人一行。基础列：Name、Company、Group、Favorite、Notes；Name 必需。每条联系方式使用独立编号列，例如 Phone1 / Phone1Label、Phone2 / Phone2Label；Email、Social、Address 同理，编号 1–30。Favorite 为 Yes/No，导入也接受 true/false、1/0 和旧版中文布尔值。
+Use a genuine `.xlsx` workbook with exactly one worksheet and one contact per row. The base columns are `Name`, `Company`, `Group`, `Favorite`, and `Notes`; the `Name` header is required.
 
-导出自动按现有信息扩展列，所有用户值作为文本写入。旧版中文表头仍可导入；新模板和导出统一为英文。
+Each contact method uses separate indexed columns, such as `Phone1` / `Phone1Label` and `Phone2` / `Phone2Label`. The same convention applies to `Email`, `Social`, and `Address`, with indexes from 1 to 30. `Favorite` is exported as `Yes` or `No`; imports also accept `true` / `false`, `1` / `0`, and the supported legacy Chinese boolean values.
 
-## 规则
+Exports expand columns according to the actual contact information and write all user-provided values as text. Legacy Chinese headers remain compatible with imports; new templates and exports use English headers.
 
-- 一次最多 1000 数据行、245 列、10 MB 请求、40 MB 解压内容。
-- 校验所有记录后再调用 `store.import_contacts` 开启事务保存；错误行使整份拒绝，提供英文错误及行号。
-- 完全相同记录（忽略联系方式顺序）跳过，同名不同内容新增，不覆盖已有联系人。
-- 不接受公式或错误单元格。表格软件编辑电话号码时须保持文本格式，以免前导零提前丢失。
+## Validation and Import Rules
 
-## 与 A 的接口
+- Each import supports at most 1,000 data rows and 245 columns, with a 10 MB request limit and a 40 MB uncompressed workbook limit.
+- Validate all records before calling `store.import_contacts` to save them in one transaction. Invalid rows reject the entire batch; row validation errors include English messages and row numbers.
+- Skip exact duplicate records, ignoring contact method order. Add contacts with the same name but different information as separate records without overwriting existing contacts.
+- Reject formula and error cells. Keep phone numbers formatted as text when editing workbooks so that spreadsheet software does not remove leading zeros before import.
 
-- A 的 `create_app` 注册 B 的 `excel_api` Blueprint；同源写保护由 A 统一执行。
-- B 通过 `current_app.config['DATABASE']` 访问 A 的存储层；B 的解析使用 A 的 `validate_contact`。
-- A 的 HTML 顺序加载 `app.js` 和 `excel.js`。B 的脚本复用 `api`、`refresh`、`toast`，A 提供这些公共函数；二者都是 defer 经典脚本。
-- `/api/template`、`/api/export` 为 GET；`/api/import` 为 multipart POST，文件字段名为 `file`，结果为 imported/skipped/total。
+## Integration with Member A
 
-## 验收
+- A's `create_app` registers B's `excel_api` Blueprint. A applies the shared same-origin write protection.
+- B accesses the storage layer using `current_app.config['DATABASE']` and reuses A's `validate_contact` when parsing records.
+- A's HTML loads `app.js` followed by `excel.js`. B's script reuses the `api`, `refresh`, and `toast` functions provided by A. Both files are classic scripts loaded with `defer`.
+- `/api/template` and `/api/export` use GET. `/api/import` uses multipart POST with a file field named `file`; the response reports `imported`, `skipped`, and `total` counts.
 
-当前 main 已包含 A、B 两部分。发布前在最新检出版本运行 `python -m pytest -q tests/test_excel.py`，并实际演示模板下载、导出多条联系方式、向测试空数据库重新导入、重复导入、错误文件拒绝。截图或视频不能只用自动化结果代替。
+## Acceptance Checks
+
+The current main branch includes both A and B. Before release, run `python -m pytest -q tests/test_excel.py` on the latest checkout. Also demonstrate template download, export of multiple contact methods, reimport into an isolated empty test database, duplicate imports, and rejection of invalid workbooks.
+
+Provide actual screenshots or video evidence of these workflows in addition to automated test results.
