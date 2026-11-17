@@ -14,7 +14,7 @@ Excel uses genuine XLSX with one contact per row and indexed value/label columns
 
 ## Module boundaries
 
-A's factory registers B's excel_api Blueprint. The HTML loads deferred classic scripts app.js and then excel.js. B reuses A's api, refresh and toast functions, validator and storage layer. Part A requires B's runtime files before it can start.
+A's factory registers B's excel_api Blueprint. The HTML loads deferred classic scripts app.js and then excel.js. B reuses A's api, refresh and toast functions, validator and storage layer. Both members' runtime files are available on main as of November 17, 2026; B's Excel upload is recorded in UPLOAD_RECORD.md.
 
 | Method | Path | Purpose |
 | --- | --- | --- |

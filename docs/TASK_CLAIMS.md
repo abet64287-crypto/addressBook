@@ -29,7 +29,7 @@ Acceptance: retain two phones, two emails, a social account and an address with 
 
 ## B: Excel transfer and validation
 
-Claimant: teammate; GitHub username pending.
+Claimant: teammate; the Excel files were uploaded by hajiyao on November 17, 2026 in [0f11165](https://github.com/abet64287-crypto/addressBook/commit/0f1116596844622d09149fe9e157e3df8afcd0cc). Complete the student's name and confirm the account mapping in the blog.
 
 - [ ] Understand indexed columns and the shared validator.
 - [ ] Verify genuine XLSX, English headers and one contact per row.
@@ -46,6 +46,6 @@ Acceptance: compatible workbooks open correctly; values, labels and favorites su
 
 Contacts contain name/company/group/notes/favorite/methods. Methods contain type/label/value, using phone/email/social/address. IDs are not import-update keys. A registers B's Blueprint and supplies api/refresh/toast; B passes validated records to transactional storage.
 
-A is uploaded to main. B must submit a PR and merge after acceptance before deployment. Both members record their own work, review each other, complete a full video and publish separate blogs. Contribution percentages must total 100% and reflect actual work.
+A and B are uploaded to main. B's five files were added directly by hajiyao in [0f11165](https://github.com/abet64287-crypto/addressBook/commit/0f1116596844622d09149fe9e157e3df8afcd0cc); no PR accompanied the upload. Review and verify the complete checkout before deployment. The required PR remains outstanding and should document actual follow-up work. Both members record their own work, review each other, complete a full video and publish separate blogs. Contribution percentages must total 100% and reflect actual work.
 
 See [handoff](GITHUB_HANDOFF.md) and [upload records](UPLOAD_RECORD.md). The chosen new repository's compatibility with the course's specified-fork requirement remains to be confirmed.

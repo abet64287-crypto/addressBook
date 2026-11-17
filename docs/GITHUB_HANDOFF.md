@@ -1,6 +1,6 @@
 # Two-member GitHub handoff and deployment
 
-Repository: [addressBook](https://github.com/abet64287-crypto/addressBook). A owns contacts/UI; B owns Excel. The two disjoint packages form one complete application after integration.
+Repository: [addressBook](https://github.com/abet64287-crypto/addressBook). A owns contacts/UI; B owns Excel. Both members' files are now on main; the Excel upload was completed on November 17, 2026 in [0f11165](https://github.com/abet64287-crypto/addressBook/commit/0f1116596844622d09149fe9e157e3df8afcd0cc).
 
 | Package | Owner | Content |
 | --- | --- | --- |
@@ -11,14 +11,11 @@ Archive paths are relative to the repository root. Upload extracted contents, no
 
 ## A upload status
 
-Four functional A commits are on main, followed by an English-documentation update. See [upload records](UPLOAD_RECORD.md). A alone cannot run or deploy. Each member should understand, verify, improve and review their assigned work and keep actual participation records. Later A changes can use a feature branch.
+Four functional A commits are on main, followed by an English-documentation update. See [upload records](UPLOAD_RECORD.md). B's five Excel files are now also on main. Each member should understand, verify, improve and review their assigned work and keep actual participation records. Later A changes can use a feature branch.
 
-## B upload and PR
+## B upload status and remaining PR
 
-1. The owner invites the teammate as a collaborator and the teammate accepts, or B forks the team repository and opens a cross-repository PR.
-2. B extracts their package and creates feature/excel-transfer from the latest main under their own account.
-3. On that branch use Add file > Upload files, preserving paths. Adding files within existing folders must not delete A's files.
-4. Confirm the diff contains B's five files only:
+B uploaded all five assigned files directly to main under the hajiyao account on November 17, 2026 in [0f11165](https://github.com/abet64287-crypto/addressBook/commit/0f1116596844622d09149fe9e157e3df8afcd0cc). The upload added these files without replacing A's files:
 
 ```text
 addressbook/excel.py
@@ -28,7 +25,7 @@ tests/test_excel.py
 docs/EXCEL_FORMAT.md
 ```
 
-5. Open a PR to the team repository's main. A reviews and verifies the full application before merging. Preserve meaningful commit history.
+The direct upload did not create a PR. Review the uploaded changes and verify the full application. The assignment still requires a PR: create a feature branch for actual follow-up work, open a PR to the required target, and retain review evidence. Preserve the existing upload history.
 
 ## Integration and release
 
@@ -39,13 +36,13 @@ node --check addressbook/static/app.js
 node --check addressbook/static/excel.js
 ```
 
-Repeat manual acceptance, record the actual date/version/results/problems, and keep meaningful changes in separate commits. Initial A history meets the repository count minimum; B must still contribute code. Commit count does not directly define contribution ratios.
+Repeat manual acceptance, record the actual date/version/results/problems, and keep meaningful changes in separate commits. Both accounts now have code uploads on main, and the repository meets the minimum commit count. Refresh each member's final count after further changes. Commit count does not directly define contribution ratios.
 
 Publish a Release after acceptance; retain PR and SHA links. Record the full video and finish both PSP records and personal blogs.
 
 ## Server pulls from GitHub
 
-After B is merged, use the existing TAT passwordless terminal. Public HTTPS clone does not require local-PC SSH setup.
+The complete A+B source is available on main. After current-checkout acceptance, use the existing TAT passwordless terminal. Public HTTPS clone does not require local-PC SSH setup.
 
 ```bash
 sudo apt-get update
@@ -66,4 +63,4 @@ curl -fsS http://127.0.0.1:8000/api/health
 
 Then follow [deployment](DEPLOYMENT.md) for DNS, the added Caddy site and public read/write acceptance. Preserve calculator configuration.
 
-B has not been uploaded on the teammate's behalf. No team PR, collaborator invitation or server deployment has been performed. Confirm the assignment's specified-fork requirement for the new team repository.
+B's upload was made by hajiyao directly to main. No team PR or server deployment has been recorded. Confirm the assignment's specified-fork requirement for the new team repository.

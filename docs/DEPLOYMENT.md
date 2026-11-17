@@ -16,7 +16,7 @@ Waitress serves the combined application behind existing Caddy. Keep 8001 privat
 
 ## 1. Install the complete GitHub source
 
-Wait for B to merge into main. Use the existing TAT passwordless terminal:
+B's Excel modules are already on main as of November 17, 2026 ([0f11165](https://github.com/abet64287-crypto/addressBook/commit/0f1116596844622d09149fe9e157e3df8afcd0cc)). Verify the complete checkout before deploying. Use the existing TAT passwordless terminal:
 
 ```bash
 sudo apt-get update

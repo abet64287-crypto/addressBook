@@ -21,4 +21,4 @@ Results: evidence/pytest.txt. Both app.js and excel.js passed node --check. The 
 
 ## Verification limits
 
-A alone is incomplete. Phone-device acceptance, load testing, public deployment and CSDN submission have not been performed. The complete video is not recorded. Repeat acceptance after B's PR and on the actual HTTPS deployment. Initial preview restrictions were resolved using localhost without changing system firewall or proxy settings.
+The complete A+B source is now available on main following hajiyao's November 17 upload ([0f11165](https://github.com/abet64287-crypto/addressBook/commit/0f1116596844622d09149fe9e157e3df8afcd0cc)). The test and browser results above remain the November 16 local records; this status update does not claim a new test run. Phone-device acceptance, load testing, public deployment and CSDN submission have not been performed. The complete video is not recorded. Repeat acceptance on the current complete checkout before release and on any actual HTTPS deployment. Initial preview restrictions were resolved using localhost without changing system firewall or proxy settings.

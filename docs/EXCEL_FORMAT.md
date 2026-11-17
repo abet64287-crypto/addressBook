@@ -1,5 +1,7 @@
 # Excel module — Member B
 
+状态：2026 年 11 月 17 日，hajiyao 已通过 [0f11165](https://github.com/abet64287-crypto/addressBook/commit/0f1116596844622d09149fe9e157e3df8afcd0cc) 将 Excel 模块、交互脚本、测试及本说明上传到 main。
+
 认领：队友。模块文件：`addressbook/excel.py`、`addressbook/excel_routes.py`、`addressbook/static/excel.js`、`tests/test_excel.py`。
 
 ## 格式
@@ -24,4 +26,4 @@
 
 ## 验收
 
-合并 A、B 后运行 `python -m pytest -q tests/test_excel.py`，并实际演示模板下载、导出多条联系方式、向测试空数据库重新导入、重复导入、错误文件拒绝。截图或视频不能只用自动化结果代替。
+当前 main 已包含 A、B 两部分。发布前在最新检出版本运行 `python -m pytest -q tests/test_excel.py`，并实际演示模板下载、导出多条联系方式、向测试空数据库重新导入、重复导入、错误文件拒绝。截图或视频不能只用自动化结果代替。

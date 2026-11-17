@@ -36,7 +36,7 @@
 
 ## Implementation
 
-The local project uses Python 3.12, Flask 3.0.3, SQLite, openpyxl 3.1.5 and native HTML/CSS/JavaScript. A's contacts and interface are uploaded; B's Excel files remain pending in the team repository. The reported tests use the complete local A+B implementation.
+The local project uses Python 3.12, Flask 3.0.3, SQLite, openpyxl 3.1.5 and native HTML/CSS/JavaScript. A's contacts/UI and B's five Excel files are uploaded to main. B's upload was made by hajiyao on November 17, 2026 in [0f11165](https://github.com/abet64287-crypto/addressBook/commit/0f1116596844622d09149fe9e157e3df8afcd0cc). The reported 30-test result comes from the complete local A+B implementation on November 16; repeat acceptance on the current checkout.
 
 The factory registers contact endpoints and an Excel Blueprint. Domain validation is shared by forms and spreadsheets. SQLite stores stable IDs and contact data including a favorite boolean and typed, labeled method arrays.
 
@@ -137,4 +137,4 @@ Use minutes. Estimate before work and record actual time afterward; do not recon
 
 On November 16, 2026, the combined local packages passed 30 tests on Windows / Python 3.12.7. Both JavaScript syntax checks passed. Browser checks covered favorite filtering, methods, saving, template download and empty-template import. See TEST_REPORT.md.
 
-B integration, complete video, public deployment, team PR, Release and final blog submissions are pending. [Add this author's actual reflection and personal problem records.]
+The Excel upload is complete. Current-checkout acceptance, complete video, public deployment, the required PR, Release and final blog submissions are pending. [Add this author's actual reflection and personal problem records.]
